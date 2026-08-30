@@ -1,0 +1,12 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración local
+.vscode/
+
+# Logs
+*.log
+
+# Dependencias (si se usa Node)
+node_modules/
