@@ -2,11 +2,12 @@
 .DS_Store
 Thumbs.db
 
-# Configuración local
+# Configuración local de VS Code
 .vscode/
 
-# Logs
+# Logs y temporales
 *.log
+*.tmp
 
-# Dependencias (si se usa Node)
+# Dependencias
 node_modules/
