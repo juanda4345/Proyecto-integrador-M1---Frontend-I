@@ -1,4 +1,4 @@
-# Proyecto Login - Fase 1
+# Proyecto Integrador (Login) - Fase 1
 
 Este proyecto corresponde a la primera entrega del sistema de gestión de notas y asistencia.
 
