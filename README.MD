@@ -10,5 +10,5 @@ Este proyecto corresponde a la primera entrega del sistema de gestión de notas 
 ## Instrucciones
 1. Clonar el repositorio.
 2. Abrir `index.html` en un navegador.
-3. Usuario: `admin` | Contraseña: `1234`
+3. Usuario: `mbappe` | Contraseña: `5555`
 4. Máximo 3 intentos antes de bloqueo.
