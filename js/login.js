@@ -13,7 +13,7 @@ function iniciarSesion() {
     console.log("Usuario:", usuario);
     console.log("Contrasena:", password);
 
-    if (usuario == "mbape" && password == "kylian") {
+    if (usuarioCorrecto == usuario && passwordCorrecta == password) {
       console.log("Acceso permitido");
       alert("Has iniciado sesión ");
       acceso = true;
