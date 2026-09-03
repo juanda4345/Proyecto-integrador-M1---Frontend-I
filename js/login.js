@@ -1,40 +1,33 @@
-const usuarioCorrecto = "admin";
-const passwordCorrecto = "1234";
+function iniciarSesion() {
+  let usuario;
+  let password;
+  let intentos = 0;
+  let acceso = false;
+  let usuarioCorrecto = "mbape";
+  let passwordCorrecta = "kylian";
 
-let intentos = 0;
-const maxIntentos = 3;
+  do {
+    usuario = prompt("Escriba su usuario:");
+    password = prompt("Escriba su contrasena:");
 
-function iniciarSesion(usuario, password) {
-  if (usuario === usuarioCorrecto && password === passwordCorrecto) {
-    return true;
-  } else {
-    return false;
+    console.log("Usuario:", usuario);
+    console.log("Contrasena:", password);
+
+    if (usuario == "mbape" && password == "kylian") {
+      console.log("Acceso permitido");
+      alert("Has iniciado sesión ");
+      acceso = true;
+    } else {
+      intentos++;
+      console.log("Datos incorrectos");
+      alert("Usuario o contrasena incorrectos");
+    }
+  } while (intentos < 3 && acceso == false);
+
+  if (intentos == 3 && acceso == false) {
+    console.log("Usuario bloqueado");
+    alert("Muchos intentos fallidos. Bloqueado");
   }
 }
 
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const usuario = document.getElementById("usuario").value;
-    const password = document.getElementById("password").value;
-    const mensaje = document.getElementById("mensaje");
-
-    intentos++;
-
-    if (iniciarSesion(usuario, password)) {
-      mensaje.textContent = "✅ Acceso concedido. Bienvenido!";
-      mensaje.style.color = "green";
-    } else {
-      if (intentos >= maxIntentos) {
-        mensaje.textContent = "⛔ Usuario bloqueado por exceso de intentos.";
-        mensaje.style.color = "red";
-        document.getElementById("loginForm").querySelector("button").disabled =
-          true;
-      } else {
-        mensaje.textContent = `❌ Credenciales incorrectas. Intento ${intentos} de ${maxIntentos}`;
-        mensaje.style.color = "red";
-      }
-    }
-  });
+iniciarSesion();
