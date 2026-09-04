@@ -15,7 +15,7 @@ function iniciarSesion() {
 
     if (usuarioCorrecto == usuario && passwordCorrecta == password) {
       console.log("Acceso permitido");
-      alert("Has iniciado sesión ");
+      alert("Has iniciado sesión");
       acceso = true;
     } else {
       intentos++;
